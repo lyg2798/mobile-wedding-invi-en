@@ -1,0 +1,134 @@
+:root {
+  --cream: #FBF6EE;
+  --paper: #FFFDF8;
+  --ink: #3F362E;
+  --ink-2: #7B6E61;
+  --line: #E7DCCC;
+  --line-2: #C8BBA8;
+  --accent: #B87A4B;
+  --accent-soft: #E6C9A8;
+  --sage: #8FA37D;
+  --sage-dark: #6E8462;
+  --sage-fill: #CFDAC0;
+  --serif: 'Cormorant Garamond', 'Cormorant SC', Georgia, serif;
+  --sans: 'Nunito', -apple-system, sans-serif;
+  --script: 'Italiana', 'Cormorant Garamond', serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #EDE5D6;
+  font-family: var(--sans);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, #F4ECDC 0%, #E4D8C0 60%, #D8C9AE 100%);
+}
+
+::selection { background: var(--accent-soft); color: var(--ink); }
+
+.stage {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  padding: 32px 0;
+}
+
+.sidenote { max-width: 260px; padding-top: 80px; }
+.sidenote h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.1;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+.sidenote h1 em { font-style: italic; color: var(--accent); font-weight: 300; }
+.sidenote p {
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0 0 14px;
+}
+.sidenote .meta {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.invite-shell {
+  width: min(420px, 100%);
+  background: var(--cream);
+  position: relative;
+  box-shadow: 0 40px 80px rgba(80, 54, 36, 0.18);
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.invite-body { background: var(--cream); }
+
+.sticky-head {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(251, 246, 238, 0.85);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--line);
+  padding: 18px 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sticky-head .brand {
+  font-family: var(--script);
+  font-size: 18px;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+.sticky-head .right {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--ink-2);
+  text-transform: uppercase;
+}
+
+.progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.5px;
+  background: transparent;
+}
+.progress > span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  width: 0%;
+  transition: width 120ms linear;
+}
+
+@media (max-width: 900px) {
+  .sidenote { display: none; }
+  .stage { gap: 0; padding: 0; }
+  .invite-shell {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
