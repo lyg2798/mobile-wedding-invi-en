@@ -14,8 +14,8 @@ export default function App() {
     const update = () => {
       const doc = document.documentElement;
       const max = doc.scrollHeight - doc.clientHeight;
-      const next = max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0;
-      setProgress(next);
+      const next = max > 0 ? Math.round(Math.min(100, (window.scrollY / max) * 100)) : 0;
+      setProgress((prev) => (prev === next ? prev : next));
     };
     update();
     window.addEventListener('scroll', update, { passive: true });

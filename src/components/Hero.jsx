@@ -79,29 +79,6 @@ export default function Hero() {
             }}
           />
         </div>
-        {/* ampersand floating */}
-        <div
-          style={{
-            position: 'absolute',
-            top: -14,
-            right: -14,
-            width: 56,
-            height: 56,
-            borderRadius: '50%',
-            background: 'var(--cream)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontFamily: 'var(--serif)',
-            fontStyle: 'italic',
-            fontSize: 34,
-            color: 'var(--accent)',
-            boxShadow: '0 4px 16px rgba(130, 92, 60, 0.18)',
-            border: '1px solid rgba(130, 92, 60, 0.15)',
-          }}
-        >
-          &amp;
-        </div>
       </div>
 
       {/* Names */}
