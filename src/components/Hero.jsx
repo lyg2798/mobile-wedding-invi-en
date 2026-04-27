@@ -59,7 +59,7 @@ export default function Hero() {
           }}
         >
           <img
-            src="/couple-hero.jpg"
+            src={`${import.meta.env.BASE_URL}couple-hero.jpg`}
             alt="JQ and Erin"
             style={{
               width: '100%',
