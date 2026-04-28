@@ -18,17 +18,13 @@ export const DATA = {
   },
   intro: {
     title: 'We’re getting married.',
-    body: `When we were young, people called us carefree.
-When we started dating, they told us to grow up.
-And now, as we’re getting married —
-maybe we finally have, a little.
+    body: `We promise to hold each other’s
+laughter, mischief, and quiet mornings —
+to keep them safe, side by side,
+for all the joyful years ahead.
 
-We promise to be the keeper of each other’s
-laughter, mischief, and quiet mornings.
-For the rest of our lives, side by side,
-we plan to live joyfully.
-
-Please come celebrate the beginning
+Whether you’re crossing the city or the ocean,
+please come celebrate the beginning
 of our story with us.`,
   },
   location: {
