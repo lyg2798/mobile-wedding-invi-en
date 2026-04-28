@@ -145,7 +145,7 @@ export default function Hero() {
             letterSpacing: '0.05em',
           }}
         >
-          11:30 AM &middot; {DATA.hero.venue}
+          11:30 AM &middot; {DATA.hero.venue} &middot; {DATA.location.hall}
         </p>
 
         <Countdown target={DATA.hero.date} />

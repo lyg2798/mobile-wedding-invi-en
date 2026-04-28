@@ -29,6 +29,7 @@ of our story with us.`,
   },
   location: {
     name: 'The War Memorial of Korea',
+    hall: 'Park Hall (1st floor)',
     address: '29 Itaewon-ro, Yongsan-gu, Seoul',
     transport: {
       subway: [

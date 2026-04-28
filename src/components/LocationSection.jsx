@@ -140,6 +140,17 @@ export default function LocationSection() {
         <p style={{ fontFamily: 'var(--serif)', fontSize: 18, color: 'var(--ink)', margin: 0 }}>{L.name}</p>
         <p
           style={{
+            fontFamily: 'var(--serif)',
+            fontStyle: 'italic',
+            fontSize: 14,
+            color: 'var(--accent)',
+            margin: '4px 0 0',
+          }}
+        >
+          {L.hall}
+        </p>
+        <p
+          style={{
             fontFamily: 'var(--sans)',
             fontSize: 12,
             color: 'var(--ink-2)',
