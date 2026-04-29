@@ -122,6 +122,28 @@ body {
   transition: width 120ms linear;
 }
 
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, #FBF6EE 0%, #F1E6D0 70%, #E4D6BA 100%);
+  transition: opacity 800ms ease-out;
+}
+.splash-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(36px, 9vw, 56px);
+  color: var(--accent);
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  margin: 0;
+}
+
 @media (max-width: 900px) {
   .sidenote { display: none; }
   .stage { gap: 0; padding: 0; }

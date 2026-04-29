@@ -5,10 +5,21 @@ import Intro from './components/Intro.jsx';
 import CalendarSection from './components/CalendarSection.jsx';
 import LocationSection from './components/LocationSection.jsx';
 import Footer from './components/Footer.jsx';
+import Splash from './components/Splash.jsx';
 
 export default function App() {
   const [progress, setProgress] = useState(0);
+  const [splashDone, setSplashDone] = useState(false);
   const scrollRef = useRef(null);
+
+  useEffect(() => {
+    if (splashDone) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [splashDone]);
 
   useEffect(() => {
     const update = () => {
@@ -27,7 +38,9 @@ export default function App() {
   }, []);
 
   return (
-    <div className="stage">
+    <>
+      {!splashDone && <Splash onDone={() => setSplashDone(true)} />}
+      <div className="stage">
       <aside className="sidenote">
         <div className="meta">October &middot; IX &middot; MMXXVI</div>
         <h1>
@@ -57,5 +70,6 @@ export default function App() {
         </div>
       </main>
     </div>
+    </>
   );
 }
